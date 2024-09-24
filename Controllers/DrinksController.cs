@@ -20,7 +20,7 @@ namespace TacoStand.Controllers
 			=> context.Drinks.Find(id) is Drink drink ? Ok(drink) : NotFound();
 
 		[HttpPost]
-		public IActionResult AddTaco([FromBody] Drink? drink)
+		public IActionResult AddDrink([FromBody] Drink? drink)
 		{
 			if (drink is null)
 				return BadRequest("No data provided");

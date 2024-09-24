@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Text.Json.Serialization;
 
 namespace TacoStand.Models;
 
@@ -12,4 +11,7 @@ public partial class Drink
     public float? Cost { get; set; }
 
     public bool? Slushie { get; set; }
+
+    [JsonIgnore]
+    public virtual ICollection<Combo> Combos { get; set; } = new List<Combo>();
 }

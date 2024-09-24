@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Text.Json.Serialization;
 
 namespace TacoStand.Models;
 
@@ -14,4 +13,7 @@ public partial class Taco
     public bool? SoftShell { get; set; }
 
     public bool? Chips { get; set; }
+
+    [JsonIgnore]
+    public virtual ICollection<Combo> Combos { get; set; } = new List<Combo>();
 }

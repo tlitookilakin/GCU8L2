@@ -8,6 +8,8 @@ namespace TacoStand.Models
 
 		public DbSet<Taco> Tacos { get; }
 
+		public DbSet<Combo> Combos { get; }
+
 		public int SaveChanges();
 	}
 }

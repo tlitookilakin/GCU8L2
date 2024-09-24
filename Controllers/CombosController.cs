@@ -26,7 +26,7 @@ namespace TacoStand.Controllers
 			combo.Taco = null;
 			context.Combos.Add(combo);
 			context.SaveChanges();
-			return Created($"Combos/{combo.Id}", combo);
+			return Created($"Combos/{combo.Id}", combo.WithExternal(context));
 		}
 
 		[HttpDelete("{id}")]

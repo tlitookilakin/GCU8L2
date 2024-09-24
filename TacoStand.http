@@ -1,0 +1,6 @@
+@TacoStand_HostAddress = http://localhost:5123
+
+GET {{TacoStand_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
